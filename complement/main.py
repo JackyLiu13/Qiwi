@@ -20,6 +20,23 @@ class User(BaseModel):
     address: str
     balance: int
 
+class Transaction(BaseModel):
+    transaction: str
+    amount: int
+    address: str
+
+# Check if transactions.json exists, if not, create it
+if not os.path.exists('transactions.json'):
+    with open('transactions.json', 'w') as f:
+        json.dump([], f)
+
+@app.get("/transactions")
+async def get_transactions():
+    with open('transactions.json', 'r') as f:
+        transactions = [Transaction(**t) for t in json.load(f)]
+    return transactions
+
+
 users = []
 
 # Check if users.json exists, if not, create it
@@ -70,3 +87,9 @@ async def remove_balance(address: str, amount: int):
             else:
                 return {"error": "Insufficient balance"}
     return {"error": "User not found"}
+
+@app.get("/users")
+async def get_users():
+    with open('users.json', 'r') as f:
+        users = [User(**u) for u in json.load(f)]
+    return users
