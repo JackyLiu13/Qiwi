@@ -78,9 +78,6 @@ Here are some screenshots of the Qiwi platform in action:
 ### Redeeming Qiwi Qoins
 ![Redeeming Qiwi Qoins](path_to_image)
 
-## Contributing
-We welcome contributions from the community. Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
