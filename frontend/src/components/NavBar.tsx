@@ -11,7 +11,7 @@ const NavBar = () => {
     return (
         <nav className="flex justify-between items-center mx-8 bg-green-200">
             <div className="font-bold px-4">
-                <Link href="/">SAMPLE TEXT
+                <Link href="/">Qiwi 🥝
                 </Link>
             </div>            <div className="space-x-5 bg-black text-white p-4">
                 <button>
@@ -20,8 +20,9 @@ const NavBar = () => {
                             <span>Logged in with account: ${account}</span>
                         </div>) : 'Not logged in'}
                     </div></button>
-                <button>Home</button>
+                <Link href="/"><button>Home</button></Link>
                 <button>About</button>
+                <Link href="/redeem" ><button>Redeem</button></Link>
                 <div className="relative inline-block text-left">
                     {account ? (
                         <button onClick={logout} className="ml-4 py-2 px-4 bg-red-600 text-white rounded">Logout</button>

@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar';
 import Spline from '@splinetool/react-spline';
 import { web3 } from '../web3';
 import contract from '../web3';
+import Link from 'next/link';
 
 export default function Home() {
     const [account, setAccount] = useState('');
@@ -54,16 +55,12 @@ export default function Home() {
             <NavBar />
             <div className="flex flex-row justify-center items-center">
                 <div className="flex flex-col md:flex-row justify-between items-center px-8">
-                    <div className="flex flex-col space-y-4 p-8 md:w-1/2 border border-black">
-                        <h1 className="text-4xl font-bold">Title</h1>
-                        <p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
-                        <button className="px-4 py-2 bg-black text-white rounded" onClick={joinProgram}>Join Program</button>
-                        <p className="text-xl mt-4">Points: {points}</p>
-                        <button className="px-4 py-2 bg-black text-white rounded" onClick={() => issuePoints(account, 10)}>Issue Points</button>
-                        <button className="px-4 py-2 bg-black text-white rounded" onClick={() => transferPoints('RECIPIENT_ADDRESS', 10)}>Transfer Points</button>
-                        <button className="px-4 py-2 bg-black text-white rounded" onClick={() => redeemPoints(10)}>Redeem Points</button>
+                    <div className="flex flex-col space-y-4 p-8 md:w-1/2 ">
+                        <h1 className="text-4xl font-bold">Qiwi</h1>
+                        <p className="text-xl">Accrue points through sustainable spending. Spend them on sustainable items. Try now!</p>
+                        <Link href="/login"><button className="px-4 py-2 bg-black text-white rounded" >Join Program</button></Link>
                     </div>
-                    <div className="flex flex-col w-full md:w-1/2 border border-black justify-center items-start">
+                    <div className="flex flex-col w-full md:w-1/2 justify-center items-start">
                         <Spline scene='https://prod.spline.design/4PhJq1Zv274PwDqd/scene.splinecode' />
                     </div>
                 </div>

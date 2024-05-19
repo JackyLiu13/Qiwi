@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "chain" : "hardhat node"
+    "chain": "hardhat node"
   },
   "dependencies": {
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.3.8",
+    "axios": "^1.6.8",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
